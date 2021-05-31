@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+<script>
+  function veri() {
+            if (isNaN(document.getElementById('valor').value)) {
+                window.alert("Digite apenas números");
+                document.getElementById('valor').value = "";
+                document.getElementById('valor').focus();
+                return false;
+            }
+        }
+</script>
+</head>
+<body>
+    <form method="POST" action="tabuada for.php">
+        <h2>TABUADA</h2>
+        <input type="text" id = "valor" name = "valor"/>
+        <input type="submit" value = "mostrar" onclick=" return veri()"/>
+        <input type="reset" value = "limpar" onclick="document.getElementById('valor').focus();" /> 
+
+        
+    </form>
+    
+</body>
+</html>
